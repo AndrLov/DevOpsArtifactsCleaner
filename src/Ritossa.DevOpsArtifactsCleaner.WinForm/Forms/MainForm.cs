@@ -215,14 +215,6 @@ namespace Ritossa.DevOpsArtifactsCleaner.WinForm.Forms
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var result = MessageBox.Show("Are you sure you want to exit?", "Please confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (result == DialogResult.No)
-            {
-                e.Cancel = true;
-                return;
-            }
-
             SaveSettings();
         }
 
